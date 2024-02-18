@@ -45,8 +45,8 @@ def main(page: Page):
                     AppBar(title=Text("Калькулятор"), bgcolor=colors.LIME_100), tf, b, t
                 ],
                 scroll=ScrollMode.ADAPTIVE
-            )
-    )
+              )
+           )
 
     page.title = "Строковый Калькулятор"
     page.update()
