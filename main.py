@@ -1,4 +1,4 @@
-from flet import ElevatedButton, Page, AppBar, View, Text, TextField, SnackBar, ScrollMode, colors, app
+from flet import ElevatedButton, Page, AppBar, Text, TextField, SnackBar, ScrollMode, colors, app
 from StringCalculator import SolveMathProblem
 
 def main(page: Page):
@@ -36,18 +36,10 @@ def main(page: Page):
     t = Text(size=20, selectable=True)
     tf = TextField(label="Введите арифметическое выражение")
     b = ElevatedButton(text="ВЫЧИСЛИТЬ", on_click=button_clicked)
+    ab = AppBar(title=Text("Калькулятор"), bgcolor=colors.LIME_100)
 
-    page.views.clear()
-    page.views.append(
-            View(
-                "",
-                [
-                    AppBar(title=Text("Калькулятор"), bgcolor=colors.LIME_100), tf, b, t
-                ],
-                scroll=ScrollMode.ADAPTIVE
-              )
-           )
-
+    page.add(ab, tf, b, t)
+    page.scroll = ScrollMode.ADAPTIVE
     page.title = "Строковый Калькулятор"
     page.update()
 
