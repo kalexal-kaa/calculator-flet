@@ -1,7 +1,6 @@
 from flet import ElevatedButton, Page, Text, TextField, SnackBar, Row, ScrollMode, MainAxisAlignment, colors, app
 from StringCalculator import SolveMathProblem
 
-
 def main(page: Page):
 
     def button_clicked(e):
